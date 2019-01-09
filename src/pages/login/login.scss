@@ -1,0 +1,22 @@
+page-login {
+    ion-content {
+        background-image: url("../assets/imgs/hermosillo3.jpeg");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .login {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        display: block;
+        background-color: #9E9E9E;
+        opacity: 0.4;
+    } 
+    .imagenlogo{
+        background-color: transparent;
+        border-bottom: 0px solid #9E9E9E;
+    } 
+}
