@@ -24,12 +24,13 @@ export class LoginPage {
     
   }
   LoginFace(){
-  this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(
-    res=>{
-      if(res){
-       this.navCtrl.setRoot(HomePage);
-      }
-    }
-  )
+  // this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(
+  //   res=>{
+  //     if(res){
+  //      this.navCtrl.setRoot(HomePage);
+  //     }
+  //   }
+  // )
+  this.navCtrl.setRoot(HomePage);
   }
 }

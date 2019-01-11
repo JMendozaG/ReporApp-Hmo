@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AguaPage } from '../pages/agua/agua';
 var config = {
   apiKey: "AIzaSyC5yDN_DjhLHlsIxw6Mszh1YnbxhNXWR9M",
   authDomain: "reportes-552ff.firebaseapp.com",
@@ -23,7 +24,8 @@ var config = {
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    AguaPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ var config = {
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    AguaPage
   ],
   providers: [
     StatusBar,

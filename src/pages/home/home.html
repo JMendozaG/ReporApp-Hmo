@@ -1,18 +1,97 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="naranja">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title text-center>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+  <div style="height:200px">
+    <ion-slides pager="true" autoplay (ionSlideDidChange)="slideChanged()" autoplay="5000" loop="true" speed="500" >
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+        <ion-slide style="background-image: url(assets/imgs/hmo1.jpg)">
+          
+          <h2>Slide 1</h2>
+        </ion-slide>
+      
+        <ion-slide style="background-image: url(assets/imgs/hmo2.jpg)">
+          <h2>Slide 2</h2>
+        </ion-slide>
+      
+        <ion-slide style="background-image: url(assets/imgs/hmo3.jpg)">
+          <h2>Slide 3</h2>
+        </ion-slide>
+      
+      </ion-slides>
+</div>
+<h3 text-center style="color:#E96000">Selecciona tu Reporte</h3>
+<br>
+<ion-grid>
+    <ion-row>
+      <ion-col>
+        <div (click)="Agua()">
+            <ion-card style="background-color:#EEEEEE">
+                <img src="assets/imgs/agua.png" width="100px" height="100px"/>
+                <ion-card-content>
+                  <!-- <ion-card-title>
+                   
+                    </ion-card-title> -->
+                  <h2 text-center> Agua</h2>
+                </ion-card-content>
+                
+              </ion-card>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="Alumbrado()">
+            <ion-card style="background-color:#EEEEEE">
+                <img src="assets/imgs/poste.png"  width="100px" height="100px"/>
+                <ion-card-content>
+                  <!-- <ion-card-title>
+                  
+                    </ion-card-title> -->
+                   <h6> Alumbrado Publico</h6>
+                </ion-card-content>
+              </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <div (click)="Calles()">
+              <ion-card style="background-color:#EEEEEE">
+                  <img src="assets/imgs/calles.png"  width="100px" height="100px"/>
+                  <ion-card-content>
+                   
+                    <h2 text-center> Calles</h2>
+                  </ion-card-content>
+                </ion-card>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div (click)="Parques()">
+              <ion-card style="background-color:#EEEEEE">
+                  <img src="assets/imgs/parque.png"  width="100px" height="100px"/>
+                  <ion-card-content>
+                    <!-- <ion-card-title>
+                    
+                      </ion-card-title> -->
+                     <h6> Parques y Jardines</h6>
+                  </ion-card-content>
+                </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-fab right bottom>
+      <button ion-fab color="naranja"><ion-icon name="md-share"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
 </ion-content>
