@@ -5,9 +5,6 @@
     </button>
     <ion-title text-center>Home</ion-title>
   </ion-navbar>
-</ion-header>
-
-<ion-content>
   <div style="height:200px">
     <ion-slides pager="true" autoplay (ionSlideDidChange)="slideChanged()" autoplay="5000" loop="true" speed="500" >
 
@@ -26,35 +23,65 @@
       
       </ion-slides>
 </div>
-<h3 text-center style="color:#E96000">Selecciona tu Reporte</h3>
-<br>
-<ion-grid>
+</ion-header>
+
+<ion-content >
+  
+<h3 text-center style="color:#666666">Selecciona tu Reporte</h3>
+
+<ion-item>
+  <ion-row align-item-center>
+    <ion-col  col-6 col-md align-self-center >
+      
+      <button class="boton_personalizado" (click)="Agua()">   
+        <img src="assets/imgs/agua.png"class="imagen"  /> 
+          <h3 style="color:#666666"> Agua</h3>
+        </button>
+        &nbsp;
+        <button class="boton_personalizado" (click)="Alumbrado()">  
+          <img src="assets/imgs/poste.png"class="imagen" /> 
+           <h3 style="color:#666666">Alumbrado Publico</h3>
+          </button>
+    </ion-col>
+</ion-row>
+</ion-item>
+<ion-item>
+  <ion-row align-item-center>
+    <ion-col  col-6 col-md align-self-center >
+      
+      <button class="boton_personalizado" (click)="Calles()">   
+        <img src="assets/imgs/calles.png"class="imagen"  /> 
+          <h3 style="color:#666666"> Calles</h3>
+        </button>
+        &nbsp;
+        <button class="boton_personalizado" (click)="Parques()">  
+          <img src="assets/imgs/parque.png"class="imagen" /> 
+           <h3 style="color:#666666">Parques y Jardines</h3>
+          </button>
+    </ion-col>
+</ion-row>
+</ion-item>
+<!-- <ion-grid>
     <ion-row>
       <ion-col>
         <div (click)="Agua()">
-            <ion-card style="background-color:#EEEEEE">
+            <button style="background-color:#EEEEEE" class="boton_personalizado">
                 <img src="assets/imgs/agua.png" width="100px" height="100px"/>
-                <ion-card-content>
-                  <!-- <ion-card-title>
-                   
-                    </ion-card-title> -->
+               
                   <h2 text-center> Agua</h2>
-                </ion-card-content>
+               
                 
-              </ion-card>
+              </button>
         </div>
       </ion-col>
       <ion-col>
         <div (click)="Alumbrado()">
-            <ion-card style="background-color:#EEEEEE">
+            <button style="background-color:#EEEEEE" class="boton_personalizado">
                 <img src="assets/imgs/poste.png"  width="100px" height="100px"/>
-                <ion-card-content>
-                  <!-- <ion-card-title>
-                  
-                    </ion-card-title> -->
+               
                    <h6> Alumbrado Publico</h6>
-                </ion-card-content>
-              </ion-card>
+                
+              </button>
         </div>
       </ion-col>
     </ion-row>
@@ -75,23 +102,23 @@
               <ion-card style="background-color:#EEEEEE">
                   <img src="assets/imgs/parque.png"  width="100px" height="100px"/>
                   <ion-card-content>
-                    <!-- <ion-card-title>
+                    <ion-card-title>
                     
-                      </ion-card-title> -->
+                      </ion-card-title>
                      <h6> Parques y Jardines</h6>
                   </ion-card-content>
                 </ion-card>
           </div>
         </ion-col>
-      </ion-row>
-  </ion-grid>
+      </ion-row> 
+  </ion-grid>-->
   <ion-fab right bottom>
       <button ion-fab color="naranja"><ion-icon name="md-share"></ion-icon></button>
-      <ion-fab-list side="left">
-        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+      <ion-fab-list side="left" >
+        <button ion-fab color="face"><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab color="naranja"><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab color="naranja"><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab color="danger"><ion-icon name="logo-googleplus"></ion-icon></button>
       </ion-fab-list>
     </ion-fab>
 </ion-content>
