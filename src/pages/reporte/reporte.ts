@@ -19,6 +19,8 @@ export class ReportePage {
    private latitud:any;
    private longitud:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,private camara: Camera,public alertCtrl: AlertController,private geolocation :Geolocation ) {
+   
+     
   }
 
   ionViewDidLoad() {
@@ -34,6 +36,7 @@ export class ReportePage {
      
      let watch = this.geolocation.watchPosition();
      watch.subscribe((data) => {
+      
       // data can be a set of coordinates, or an error (if an error occurred).
       // data.coords.latitude
       // data.coords.longitude
