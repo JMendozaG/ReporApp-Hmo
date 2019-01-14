@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
 /**
  * Generated class for the ReportePage page.
  *
@@ -15,11 +16,28 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class ReportePage {
    private base64Image : string;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private camara: Camera,public alertCtrl: AlertController) {
+   private latitud:any;
+   private longitud:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private camara: Camera,public alertCtrl: AlertController,private geolocation :Geolocation ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ReportePage');
+   
+    this.geolocation.getCurrentPosition().then((resp) => {
+      this.latitud= resp.coords.latitude
+      this.longitud= resp.coords.longitude
+      console.log(this.latitud);
+      console.log(this.longitud);
+     }).catch((error) => {
+       console.log('Error getting location', error);
+     });
+     
+     let watch = this.geolocation.watchPosition();
+     watch.subscribe((data) => {
+      // data can be a set of coordinates, or an error (if an error occurred).
+      // data.coords.latitude
+      // data.coords.longitude
+     });
   }
   Camara(){
   const options: CameraOptions = {
