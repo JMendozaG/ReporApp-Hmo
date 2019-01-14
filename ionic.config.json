@@ -1,5 +1,7 @@
 {
   "name": "ReportApp_Hmo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

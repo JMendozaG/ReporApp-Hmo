@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ReportePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="naranja">
+    <ion-title>Reporte</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item (click)="titulo()">
+      <ion-label floating>Titulo de Reporte</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Ubicacion</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Descripcion</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <h3>Tomar foto</h3>
+          <button ion-fab color="naranja" (click)="Camara()"><ion-icon name="camera"></ion-icon></button>
+        </ion-item>
+        <ion-item>
+            <img src="base64Image" alt="">
+          </ion-item>
+    
+  </ion-list>
+  <button ion-button color="naranja" outline block>Enviar </button>
+</ion-content>
