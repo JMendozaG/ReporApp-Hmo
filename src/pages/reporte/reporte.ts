@@ -15,7 +15,7 @@ import { Geolocation } from '@ionic-native/geolocation';
   templateUrl: 'reporte.html',
 })
 export class ReportePage {
-   private base64Image : string;
+   MiFoto:any;
    private latitud:any;
    private longitud:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,private camara: Camera,public alertCtrl: AlertController,private geolocation :Geolocation ) {
@@ -52,7 +52,7 @@ export class ReportePage {
   this.camara.getPicture(options).then((imageData) => {
     // imageData is either a base64 encoded string or a file URI
     // If it's base64 (DATA_URL):
-     this.base64Image = 'data:image/jpeg;base64,' + imageData;
+     this.MiFoto = 'data:image/jpeg;base64,' + imageData;
    }, (err) => {
     // Handle error
    });
