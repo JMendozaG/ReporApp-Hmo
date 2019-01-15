@@ -7,33 +7,38 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <div style="height:200px">
+<ion-content style="background :#EEEEEE" >
+  
+  <div style="height:200px"  >
     <ion-slides pager="true" autoplay (ionSlideDidChange)="slideChanged()" autoplay="5000" loop="true" speed="500" >
 
-        <ion-slide style="background-image: url(assets/imgs/hmo1.jpg)">
+        <ion-slide style="background-image: url(assets/imgs/hmo1.jpg)" >
           
-          <h2>Slide 1</h2>
+          <!-- <h2>Slide 1</h2> -->
         </ion-slide>
       
         <ion-slide style="background-image: url(assets/imgs/hmo2.jpg)">
-          <h2>Slide 2</h2>
+          <!-- <h2>Slide 2</h2> -->
         </ion-slide>
       
         <ion-slide style="background-image: url(assets/imgs/hmo3.jpg)">
-          <h2>Slide 3</h2>
+          <!-- <h2>Slide 3</h2> -->
         </ion-slide>
       
       </ion-slides>
-</div>
+
+    </div>
+  
 <h3 text-center style="color:#E96000">Selecciona tu Reporte</h3>
 <br>
 <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div (click)="Agua()">
-            <ion-card style="background-color:#EEEEEE">
-                <img src="assets/imgs/agua.png" width="100px" height="100px"/>
+    <ion-row >
+      <ion-col >
+        <div (click)="Agua()" >
+            <ion-card style="background-color:#EEEEEE;">
+              
+                <img src="assets/imgs/Agua1.png" class="image" />
+              
                 <ion-card-content>
                   <!-- <ion-card-title>
                    
@@ -47,12 +52,12 @@
       <ion-col>
         <div (click)="Alumbrado()">
             <ion-card style="background-color:#EEEEEE">
-                <img src="assets/imgs/poste.png"  width="100px" height="100px"/>
+                <img src="assets/imgs/Alumbrado1.png" class="image" />
                 <ion-card-content>
                   <!-- <ion-card-title>
                   
                     </ion-card-title> -->
-                   <h6> Alumbrado Publico</h6>
+                   <h6 text-center> Alumbrado Publico</h6>
                 </ion-card-content>
               </ion-card>
         </div>
@@ -62,7 +67,7 @@
         <ion-col>
           <div (click)="Calles()">
               <ion-card style="background-color:#EEEEEE">
-                  <img src="assets/imgs/calles.png"  width="100px" height="100px"/>
+                  <img src="assets/imgs/Calles1.png"  class="image" />
                   <ion-card-content>
                    
                     <h2 text-center> Calles</h2>
@@ -73,12 +78,12 @@
         <ion-col>
           <div (click)="Parques()">
               <ion-card style="background-color:#EEEEEE">
-                  <img src="assets/imgs/parque.png"  width="100px" height="100px"/>
+                  <img src="assets/imgs/Parque1.png"  class="image"/>
                   <ion-card-content>
                     <!-- <ion-card-title>
                     
                       </ion-card-title> -->
-                     <h6> Parques y Jardines</h6>
+                     <h6 text-center> Parques y Jardines</h6>
                   </ion-card-content>
                 </ion-card>
           </div>
