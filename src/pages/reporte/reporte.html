@@ -29,15 +29,18 @@
         <ion-label floating>Descripcion</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
-      <ion-item>
-          <h3>Tomar foto</h3>
-          <button ion-fab color="naranja" (click)="Camara()"><ion-icon name="camera"></ion-icon></button>
-        </ion-item>
+      
+          
+         
+        
          </ion-list>
-         <div>
-            <img src="{{MiFoto}}" alt="" width="60px" height="60px">
-        </div>
-    
+        
+          <div style="height: 100px">
+          <img src="{{MiFoto}}" alt="" width="150px" height="200px">
+          </div>
+          <ion-fab center bottom>
+            <button ion-fab color="naranja" (click)="Camara()"><ion-icon name="camera"></ion-icon></button>
+         </ion-fab>
  
   <button ion-button color="naranja" outline block>Enviar </button>
 </ion-content>

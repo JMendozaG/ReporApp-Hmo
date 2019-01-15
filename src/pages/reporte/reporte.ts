@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
+
+
 /**
  * Generated class for the ReportePage page.
  *
@@ -45,7 +47,7 @@ export class ReportePage {
   Camara(){
   const options: CameraOptions = {
     quality: 100,
-    destinationType: this.camara.DestinationType.FILE_URI,
+    destinationType: this.camara.DestinationType.DATA_URL,
     encodingType: this.camara.EncodingType.JPEG,
     mediaType: this.camara.MediaType.PICTURE
   }
