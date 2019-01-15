@@ -55,6 +55,9 @@
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       }
-    }
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }
