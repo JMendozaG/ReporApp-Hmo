@@ -13,20 +13,30 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  style="background-color:#EEEEEE">
     <ion-card>
+<<<<<<< HEAD
         <img src="assets/imgs/Fugas.JPG"/>
         <ion-card-content>
           <ion-card-title>
+=======
+        <img src="assets/imgs/Fugas.jpg"/>
+        <ion-card-content >
+          <ion-card-title style="color:#E96000">
+>>>>>>> d8f8c5c7c30646511a05ecda06a660917710cd7e
             Reporte de Agua
             </ion-card-title>
-          <p>
-            En esta seccion puedes levantar reportes tales como:<br> Fugas de aguas en calles<br> Fugas en domicilios
-           <br> problemas de drenaje <br>Colonia sin servicio
-          </p>
+          <h2 style="color:#666666">
+            En esta seccion puedes levantar reportes tales como:
+            
+          </h2><br>
+          <h2 style="color:#DB4437"> ° Fugas de aguas en calles</h2>
+          <h2 style="color:#DB4437"> ° Fugas en domicilios</h2>
+          <h2 style="color:#DB4437"> ° problemas de drenaje</h2>
+          <h2 style="color:#DB4437">° Colonia sin servicio</h2>
         </ion-card-content>
       </ion-card>
-      <ion-fab right bottom>
+      <ion-fab right bottom (click)="RedirecReporte()">
           <button ion-fab color="naranja"><ion-icon name="add"></ion-icon></button>
           
         </ion-fab>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {ReportePage} from '../../pages/reporte/reporte';
 /**
  * Generated class for the AguaPage page.
  *
@@ -21,5 +21,7 @@ export class AguaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AguaPage');
   }
-
+  RedirecReporte(){
+    this.navCtrl.push(ReportePage);
+  }
 }
