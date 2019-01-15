@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-<<<<<<< HEAD
 import { Facebook } from '@ionic-native/facebook';
-=======
 import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
->>>>>>> d8f8c5c7c30646511a05ecda06a660917710cd7e
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -53,14 +50,11 @@ var config = {
   providers: [
     StatusBar,
     SplashScreen,
-<<<<<<< HEAD
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Facebook
-=======
+    Facebook,
     Camera,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
->>>>>>> d8f8c5c7c30646511a05ecda06a660917710cd7e
   ]
 })
 export class AppModule {}
