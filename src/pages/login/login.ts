@@ -26,58 +26,68 @@ export class LoginPage {
   ionViewDidLoad() {
     
   }
-  loginFacebook(){
-    this.facebook.login(['public_profile', 'email'])
-    .then(rta => {
-      console.log(rta.status);
-      if(rta.status == 'connected'){
-        this.getInfo();
-        this.navCtrl.setRoot(HomePage);
-      };
-    })
-    .catch(error =>{
-      console.error( error );
-    });
-  }
+  // loginFacebook(){
+  //   this.facebook.login(['public_profile', 'email'])
+  //   .then(rta => {
+  //     this.getInfo(); 
+  //     // console.log(rta.status);
+  //     // if(rta.status == 'connected'){
+  //     //   this.getInfo();
+  //     //   //this.LoginFace();
+  //     //   //this.navCtrl.setRoot(HomePage);
+  //     // };
+  //   })
+  //   .catch(error =>{
+  //     console.error( error );
+  //   });
+  // }
 
-  getInfo(){
-    this.facebook.api('/me?fields=id,name,email,first_name,picture,last_name,gender',['public_profile','email'])
-    .then(data=>{
-      console.log(data);
-      this.showUser = true; 
-      this.user = data;
-    })
-    .catch(error =>{
-      console.error( error );
-    });
-  }
-
-
-
-  // async loginWithFacebook(): Promise<any> {
-  //   try {
+  // getInfo(){
+  //   this.facebook.api('/me?fields=id,name,email,first_name,picture,last_name,gender',['public_profile','email'])
+  //   .then(async data=>{
+  //     console.log(data);
+  //     this.showUser = true; 
+  //     this.user = data;
   //     const response = await this.facebook.login(['email']);
   //     const facebookCredential = firebase.auth.FacebookAuthProvider
   //       .credential(response.authResponse.accessToken);
-  //     firebase.auth().signInWithCredential(facebookCredential)
+  //       firebase.auth().signInWithCredential(facebookCredential)
   //       .then(success => {
   //         this.navCtrl.setRoot(HomePage);
   //         //alert("Firebase success: " + JSON.stringify(success));
   //       });
-  //   }
-  //   catch (error) {
-  //     console.log(error);
-  //   }
+  //   })
+  //   .catch(error =>{
+  //     console.error( error );
+  //   });
   // }
 
-  // LoginFace(){
-  // this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(
-  //   res=>{
-  //     if(res){
-  //      this.navCtrl.setRoot(HomePage);
-  //     }
-  //   }
-  // )
-  // this.navCtrl.setRoot(HomePage);
-  // }
+
+
+  async loginWithFacebook(): Promise<any> {
+    try {
+      const response = await this.facebook.login(['email']);
+      const facebookCredential = firebase.auth.FacebookAuthProvider
+        .credential(response.authResponse.accessToken);
+      firebase.auth().signInWithCredential(facebookCredential)
+        .then(success => {
+          this.navCtrl.setRoot(HomePage);
+          //alert("Firebase success: " + JSON.stringify(success));
+        });
+    }
+    catch (error) {
+      console.log(error);
+    }
+  }
+
+  LoginFace(){
+  this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(
+    res=>{
+      if(res){
+       this.navCtrl.setRoot(HomePage);
+      }
+    }
+  )
+  this.navCtrl.setRoot(HomePage);
+  }
 }
