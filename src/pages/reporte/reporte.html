@@ -6,8 +6,31 @@
 -->
 <ion-header>
 
-  <ion-navbar color="naranja">
-    <ion-title>Reporte</ion-title>
+  <ion-navbar color="naranja" >
+    <ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col style="font-size: 26px">
+              Reporte
+          </ion-col>
+          <ion-col>
+              <div class="divv">
+                  <ion-icon  class="icono" name="camera" (click)="Camara()"></ion-icon>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      
+      
+      
+    </ion-title>
+    
+      
+    
+     
+    
+    
   </ion-navbar>
 
 </ion-header>
@@ -35,12 +58,18 @@
         
          </ion-list>
         
-          <div style="height: 100px">
-          <img src="{{MiFoto}}" alt="" width="150px" height="200px">
+         <ion-label>
+           <div style="text-align: center">
+              <h3>Foto</h3>
+           </div>
+           
+         </ion-label>
+          <div style="height: 100px; text-align: center">
+          <img src="{{MiFoto}}" alt="" height="200px" width="auto" >
           </div>
-          <ion-fab center bottom>
-            <button ion-fab color="naranja" (click)="Camara()"><ion-icon name="camera"></ion-icon></button>
+          <ion-fab right bottom>
+            <button ion-fab color="naranja"><ion-icon name="send"></ion-icon> </button>
          </ion-fab>
  
-  <button ion-button color="naranja" outline block>Enviar </button>
+ 
 </ion-content>
