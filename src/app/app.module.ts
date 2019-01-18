@@ -14,6 +14,9 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AguaPage } from '../pages/agua/agua';
 import {ReportePage} from '../pages/reporte/reporte';
+import {AlumbradoPage} from '../pages/alumbrado/alumbrado';
+import {CallesPage} from '../pages/calles/calles';
+import {ParquesPage} from '../pages/parques/parques';
 var config = {
   apiKey: "AIzaSyC5yDN_DjhLHlsIxw6Mszh1YnbxhNXWR9M",
   authDomain: "reportes-552ff.firebaseapp.com",
@@ -29,7 +32,10 @@ var config = {
     ListPage,
     LoginPage,
     AguaPage,
-    ReportePage
+    ReportePage,
+    AlumbradoPage,
+    CallesPage,
+    ParquesPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,10 @@ var config = {
     ListPage,
     LoginPage,
     AguaPage,
-    ReportePage
+    ReportePage,
+    AlumbradoPage,
+    CallesPage,
+    ParquesPage
   ],
   providers: [
     StatusBar,

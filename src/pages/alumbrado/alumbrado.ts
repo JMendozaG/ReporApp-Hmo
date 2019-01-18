@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ReportePage} from '../../pages/reporte/reporte';
 /**
- * Generated class for the AguaPage page.
+ * Generated class for the AlumbradoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import {ReportePage} from '../../pages/reporte/reporte';
 
 @IonicPage()
 @Component({
-  selector: 'page-agua',
-  templateUrl: 'agua.html',
+  selector: 'page-alumbrado',
+  templateUrl: 'alumbrado.html',
 })
-export class AguaPage {
-    private categoria:string="Agua";
+export class AlumbradoPage {
+  private categoria:string="Alumbrado";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AguaPage');
+    console.log('ionViewDidLoad AlumbradoPage');
   }
   RedirecReporte(){
     this.navCtrl.push(ReportePage,{categoria:this.categoria});

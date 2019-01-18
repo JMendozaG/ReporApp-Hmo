@@ -20,8 +20,10 @@ export class ReportePage {
    MiFoto:any;
    private latitud:any;
    private longitud:any;
+   private categoria:string;
+   private Titulo:string;
   constructor(public navCtrl: NavController, public navParams: NavParams,private camara: Camera,public alertCtrl: AlertController,private geolocation :Geolocation ) {
-   
+    this.categoria = navParams.get('categoria');
      
   }
 
@@ -61,24 +63,71 @@ export class ReportePage {
  }
 
  titulo(){
-  let alert = this.alertCtrl.create();
+   if(this.categoria=='Agua'){
+      let alert = this.alertCtrl.create();
   alert.setTitle('Titulo Reporte');
 
   alert.addInput({
     type: 'radio',
     label: 'Fuga en Calle',
-    value: 'blue',
-    checked: true
+    value: 'Fuga en Calle',
+   
+  });
+  alert.addInput({
+    type: 'radio',
+    label: 'Fuga en Domicilio',
+    value: 'Fuga en Domicilio',
+   
+  });
+  alert.addInput({
+    type: 'radio',
+    label: 'Fuga de Drenaje',
+    value: 'Fuga de Drenaje',
+   
+  });
+  alert.addInput({
+    type: 'radio',
+    label: 'Sin servicio',
+    value: 'Sin servicio',
+   
   });
 
   alert.addButton('Cancel');
   alert.addButton({
     text: 'OK',
     handler: data => {
-      
+      this.Titulo= data;
     }
   });
   alert.present();
+   }
+   if(this.categoria=='Alumbrado'){
+    let alert = this.alertCtrl.create();
+alert.setTitle('Titulo Reporte');
+
+alert.addInput({
+  type: 'radio',
+  label: 'Calle sin luz',
+  value: 'Calle sin luz',
+ 
+});
+alert.addInput({
+  type: 'radio',
+  label: 'Lampara sin prender',
+  value: 'Lampara sin prender',
+ 
+});
+
+
+alert.addButton('Cancel');
+alert.addButton({
+  text: 'OK',
+  handler: data => {
+    this.Titulo= data;
+  }
+});
+alert.present();
+ }
 }
  }
 
