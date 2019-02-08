@@ -17,6 +17,9 @@ import {ReportePage} from '../pages/reporte/reporte';
 import {AlumbradoPage} from '../pages/alumbrado/alumbrado';
 import {CallesPage} from '../pages/calles/calles';
 import {ParquesPage} from '../pages/parques/parques';
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { GeocoderProvider} from '../providers/geocoder/geocoder';
+import { NativeGeocoderOriginal } from '@ionic-native/native-geocoder';
 var config = {
   apiKey: "AIzaSyC5yDN_DjhLHlsIxw6Mszh1YnbxhNXWR9M",
   authDomain: "reportes-552ff.firebaseapp.com",
@@ -59,11 +62,14 @@ var config = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     Facebook,
     Camera,
     Geolocation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NativeGeocoderOriginal,
+    GoogleMaps, 
+    GeocoderProvider
+    
   ]
 })
 export class AppModule {}
